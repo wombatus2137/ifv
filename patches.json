@@ -203,7 +203,7 @@
       "css": ["newDashboard/styles.css"]
     },
     "devices": "mobileOnly",
-    "allowedHostsCss": ["uczen.eduvulcan.pl", "dziennik-uczen.vulcan.net.pl"]   
+    "allowedHostsCss": ["uczen.eduvulcan.pl", "dziennik-uczen.vulcan.net.pl"]
   },
   {
     "name": "Fix going back in history",
@@ -250,6 +250,33 @@
     "description": "Counts averages in grades table and gives access to \"Uczeń na tle klasy\".",
     "files": {
         "js": ["countAverage.js"]
-    }
+    },
+    "settings": [
+        {
+            "id": "plusValue",
+            "name": "Plus value",
+            "description": "Value to add when the grade has a plus (e.g. 3+).",
+            "type": "number",
+            "default": 0.3,
+            "step": 0.1
+        },
+        {
+            "id": "minusValue",
+            "name": "Minus value",
+            "description": "Value to be deducted when the grade has a minus (e.g. 3-).",
+            "type": "number",
+            "default": 0.3,
+            "step": 0.1
+        }
+    ]
+  },
+  {
+    "name": "Display settings on the website",
+    "description": "Makes patches settings accessible.",
+    "files": {
+      "js": ["patchesSettings/desktop.js", "patchesSettings/mobile.js"],
+      "css": ["patchesSettings/style.css"]
+    },
+    "allowedHostsCss": ["uczen.eduvulcan.pl", "dziennik-uczen.vulcan.net.pl", "wiadomosci.eduvulcan.pl", "dziennik-wiadomosci.vulcan.net.pl"]
   }
 ]
