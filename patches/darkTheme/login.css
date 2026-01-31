@@ -50,4 +50,14 @@
     .startIframeContainer {
         background: none !important;
     }
+    div.message-error {
+        background-color: var(--component-background);
+        border: 2px solid color-mix(in srgb, var(--component-background) 20%, #F00 80%);
+    }
+    div.v-captcha-input, div.v-captcha-input > label, div.v-captcha-input > input {
+        color: var(--primary-text);
+    }
+    div.v-captcha-input > input {
+        background-color: var(--component-background);
+    }
 }
