@@ -1,7 +1,7 @@
 import { getFromAside } from "../apis/aside.js";
-import { getAssetURL } from "../apis/getAssetURL.js";
 import { waitForRender } from "../apis/waitForElement.js";
 import { setHighlights } from "./highlights.js";
+import { getAssetURL } from "../apis/getAssetURL.js";
 
 if (window.location.hostname.match(/^(dziennik-)?(uczen).*/))
     window.asideMode = "hidden";

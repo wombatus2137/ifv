@@ -8,7 +8,7 @@ function addMobileSettings() {
     settingsButton.addEventListener("click", async () => {
         const settingsModal = document.createElement("div");
         settingsModal.classList.add("settings-popup", "list-modal");
-        settingsModal.innerHTML = `<div><img src='${getAssetURL("icons/keyboard_backspace")}'><h1>Ustawienia IFV</h1></div><div></div>`;
+        settingsModal.innerHTML = `<div><img src='${getAssetURL("icons/keyboard_backspace.svg")}'><h1>Ustawienia IFV</h1></div><div></div>`;
         settingsModal.querySelector("img").addEventListener("click", () => {
             settingsModal.remove();
         });

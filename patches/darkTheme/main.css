@@ -1207,7 +1207,7 @@
         border: 1px solid var(--borders);
     }
     .search-bar input[type="text"] {
-        color: var(--primary-text);
+        color: #8E8E8E;
     }
     #ifv-close-patches-modal img {
         filter: invert(1);
