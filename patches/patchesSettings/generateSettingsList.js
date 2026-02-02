@@ -1,7 +1,7 @@
 import { getSetting, saveSetting } from "../apis/settings.js";
 import { settingRenderers } from "./settingRenderers.js";
 import { removeMarks, markTextInElement } from "./markers.js";
-import { getAssetURL } from "../apis/returnAssetURL.js";
+import { getAssetURL } from "../apis/getAssetURL.js";
 
 export async function generateSettingsList() {
     const patches = JSON.parse(sessionStorage.getItem("IFV_PATCHES")) || [];
@@ -14,7 +14,7 @@ export async function generateSettingsList() {
             <img src="${getAssetURL("icons/search.svg")}">
             <input placeholder="Search" type="text" autofocus />
             <button id="clear">
-                <img src="${getAssetURL("icons/clear.svg")}">
+                <img src="${getAssetURL("icons/cancel.svg")}">
             </button>
         </div>
         <div class="no-results-message">Nie znaleziono pasujących patchy 😿</div>

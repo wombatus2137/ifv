@@ -1,5 +1,5 @@
 import { getFromAside } from "../apis/aside.js";
-import { getAssetURL } from "../apis/returnAssetURL.js";
+import { getAssetURL } from "../apis/getAssetURL.js";
 import { waitForRender } from "../apis/waitForElement.js";
 import { setHighlights } from "./highlights.js";
 
@@ -32,15 +32,13 @@ const getPages = (selector = "aside > section > .MuiList-root > ul") => {
     });
 };
 
-const BACK_ICON_URL = getAssetURL(
-    "icons/keyboard_backspace_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg",
-);
+const backIconURL = getAssetURL("icons/keyboard_backspace.svg");
 
 const navIcons = {
-    tablica: "dashboard",
-    oceny: "counter_6",
-    frekwencja: "event_available",
-    planZajec: "calendar_clock",
+    tablica: "dashboard.svg",
+    oceny: "counter_6.svg",
+    frekwencja: "event_available.svg",
+    planZajec: "calendar_clock.svg",
 };
 
 const run = async () => {
@@ -50,7 +48,7 @@ const run = async () => {
     const more = document.createElement("div");
     more.classList.add("more-popup");
     more.classList.add("list-modal");
-    more.innerHTML = `<div><img src='${BACK_ICON_URL}'><h1>Więcej</h1></div><div></div>`;
+    more.innerHTML = `<div><img src='${backIconURL}'><h1>Więcej</h1></div><div></div>`;
     more.style.display = "none";
 
     more.querySelector("img").addEventListener("click", () => {
@@ -82,7 +80,7 @@ const run = async () => {
             item.querySelector(".name").innerText = page.name;
             more.querySelector("div:last-of-type").appendChild(item);
         } else {
-            item.innerHTML = `<div><img src="${getAssetURL(`icons/${navIcons[itemClass]}_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg`)}"></div><div></div>`;
+            item.innerHTML = `<div><img src="${getAssetURL(`icons/${navIcons[itemClass]}`)}"></div><div></div>`;
             item.querySelector("div:last-of-type").innerText = page.name;
             nav.appendChild(item);
         }
@@ -99,7 +97,7 @@ const run = async () => {
             });
         } else {
             const detailedOptionsPage = document.createElement("div");
-            detailedOptionsPage.innerHTML = `<div><img src='${BACK_ICON_URL}'><h1></h1></div><div></div>`;
+            detailedOptionsPage.innerHTML = `<div><img src='${backIconURL}'><h1></h1></div><div></div>`;
             detailedOptionsPage.style.zIndex = "4002";
             detailedOptionsPage.style.display = "none";
             detailedOptionsPage.classList.add("list-modal");
@@ -157,7 +155,7 @@ const run = async () => {
     const moreButton = document.createElement("div");
     moreButton.innerHTML = `
         <div>
-            <img src=${getAssetURL("icons/menu_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg")}>
+            <img src=${getAssetURL("icons/menu.svg")}>
         </div>
         <div>Więcej</div>
         `;

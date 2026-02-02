@@ -9,28 +9,16 @@ const doesHaveClickableParent = (element) => {
 };
 
 const icons = [
-    [
-        "Dzisiejszy plan zajęć",
-        "calendar_clock_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg",
-    ],
-    [
-        "Oceny od ostatniego logowania",
-        "counter_6_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg",
-    ],
-    ["Sprawdziany", "quiz_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg"],
-    ["Zadania domowe", "summarize_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg"],
-    ["Informacje", "folder_info_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg"],
-    ["Ogłoszenia", "campaign_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg"],
-    ["Ankiety", "feedback_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg"],
-    [
-        "Frekwencja",
-        "event_available_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg",
-    ],
-    [
-        "Dyżurni",
-        "person_raised_hand_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg",
-    ],
-    ["Ważne dzisiaj", "strategy_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg"],
+    ["Dzisiejszy plan zajęć", "calendar_clock.svg"],
+    ["Oceny od ostatniego logowania", "counter_6.svg"],
+    ["Sprawdziany", "quiz.svg"],
+    ["Zadania domowe", "summarize.svg"],
+    ["Informacje", "folder_info.svg"],
+    ["Ogłoszenia", "campaign.svg"],
+    ["Ankiety", "feedback.svg"],
+    ["Frekwencja", "event_available.svg"],
+    ["Dyżurni", "person_raised_hand.svg"],
+    ["Ważne dzisiaj", "strategy.svg"],
 ];
 
 const applyIcons = () => {
@@ -109,15 +97,15 @@ const createToolbar = async () => {
     element.classList.add("dashboard-info-toolbar");
     element.innerHTML = `
         <div>
-            <img src="${getAssetURL("icons/star_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg")}">
+            <img src="${getAssetURL("icons/star.svg")}">
             <span>-</span>
         </div>
         <div>
-            <img src="${getAssetURL("icons/event_note_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg")}">
+            <img src="${getAssetURL("icons/event_note.svg")}">
             <span>-</span>
         </div>
         <div>
-            <img src="${getAssetURL("icons/mail_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg")}">
+            <img src="${getAssetURL("icons/mail.svg")}">
             <span>-</span>
         </div>
     </div>`;

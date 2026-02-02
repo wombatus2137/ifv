@@ -1,5 +1,5 @@
 import { waitForRender } from "../waitForElement.js";
-import { getAssetURL } from "../apis/getAssetURL.js";
+import { getAssetURL } from "../getAssetURL.js";
 
 const dayNames = [
     "poniedziałek",
@@ -45,9 +45,9 @@ export class SelectorRenderer {
         element.innerHTML = `
             <input type="date">
             <div>
-                <img src="${getAssetURL("icons/chevron_left_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg")}">
+                <img src="${getAssetURL("icons/chevron_left.svg")}">
                 <span></span>
-                <img src="${getAssetURL("icons/chevron_right_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg")}">
+                <img src="${getAssetURL("icons/chevron_right.svg")}">
             </div>
         `;
 

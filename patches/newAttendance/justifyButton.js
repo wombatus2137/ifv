@@ -3,7 +3,7 @@ import { getAssetURL } from "../apis/getAssetURL.js";
 const createButton = () => {
     const button = document.createElement("button");
     button.classList.add("justify-abstence");
-    button.innerHTML = `<img src="${getAssetURL("icons/stylus_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg")}"> Usprawiedliw`;
+    button.innerHTML = `<img src="${getAssetURL("icons/stylus.svg")}"> Usprawiedliw`;
     button.addEventListener("click", () => {
         document
             .querySelector(".app__content__header > .toolbar > button")

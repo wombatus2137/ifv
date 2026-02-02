@@ -1,6 +1,6 @@
 import { generateSettingsList } from "./generateSettingsList.js";
 import { waitForRender } from "../apis/waitForElement.js";
-import { getAssetURL, returnAssetUrl } from "../apis/returnAssetURL.js";
+import { getAssetURL } from "../apis/getAssetURL.js";
 
 function addMobileSettings() {
     const settingsButton = document.createElement("div");
@@ -8,7 +8,7 @@ function addMobileSettings() {
     settingsButton.addEventListener("click", async () => {
         const settingsModal = document.createElement("div");
         settingsModal.classList.add("settings-popup", "list-modal");
-        settingsModal.innerHTML = `<div><img src='${getAssetURL("icons/keyboard_backspace_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg")}'><h1>Ustawienia IFV</h1></div><div></div>`;
+        settingsModal.innerHTML = `<div><img src='${getAssetURL("icons/keyboard_backspace")}'><h1>Ustawienia IFV</h1></div><div></div>`;
         settingsModal.querySelector("img").addEventListener("click", () => {
             settingsModal.remove();
         });

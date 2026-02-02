@@ -1,4 +1,5 @@
 import { clickOnAside } from "../apis/aside.js";
+import { getAssetURL } from "../apis/getAssetURL.js";
 
 function createButton() {
     const button = document.createElement("span");
@@ -28,7 +29,7 @@ function move() {
     });
 
     const button = document.querySelector(".go_to_dashboard") || createButton();
-    button.innerHTML = `<img src="${getAssetURL("icons/reply_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg")}"> Tablica`;
+    button.innerHTML = `<img src="${getAssetURL("icons/reply.svg")}"> Tablica`;
     button.classList.add("hidden");
     document.body.appendChild(button);
 
