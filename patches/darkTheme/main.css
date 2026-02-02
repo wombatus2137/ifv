@@ -1033,6 +1033,14 @@
     div.header__logo-product {
         color: var(--secondary-text) !important;
     }
+    span.go_to_dashboard {
+        color: var(--secondary-text);
+        background: var(--primary-background);
+        border-color: var(--borders);
+    }
+    span.go_to_dashboard > img {
+        filter: brightness(93.5%);
+    }
     .tile__header.flex__items > .flex__item-auto > img,
     .dashboard-info-toolbar > div > img,
     button.ql-bold > svg {
@@ -1177,11 +1185,13 @@
         box-shadow: 0 0 300px color-mix(in srgb, var(--evBlue), transparent 85%) !important;
         transition: 0.1s ease-out box-shadow;
     }
-    .setting-boolean-toggle .toggle-input, .checkbox-item input[type="checkbox"] {
+    .setting-boolean-toggle .toggle-input,
+    .checkbox-item input[type="checkbox"] {
         box-shadow: 0 0 30px color-mix(in srgb, var(--evBlue), transparent 90%) !important;
         transition: 0.1s ease-out box-shadow;
     }
-    .setting-boolean-toggle .toggle-input:hover, .checkbox-item input[type="checkbox"]:hover {
+    .setting-boolean-toggle .toggle-input:hover,
+    .checkbox-item input[type="checkbox"]:hover {
         box-shadow: 0 0 15px color-mix(in srgb, var(--evBlue), transparent 85%) !important;
     }
     .checkbox-item input[type="checkbox"] {
@@ -1207,7 +1217,7 @@
         border: 1px solid var(--borders);
     }
     .search-bar input[type="text"] {
-        color: #8E8E8E;
+        color: #8e8e8e;
     }
     #ifv-close-patches-modal img {
         filter: invert(1);
@@ -1234,10 +1244,14 @@
     .no-results-message {
         color: var(--primary-text);
     }
-    .patch > .patch-header > *, .patch .setting-header > * {
+    .patch > .patch-header > *,
+    .patch .setting-header > * {
         text-shadow: 0 0 50px color-mix(in srgb, var(--evBlue), transparent 70%);
     }
     .checkbox-item input[type="checkbox"]:checked {
-        transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.1s ease-out;
+        transition:
+            background-color 0.2s ease-in-out,
+            border-color 0.2s ease-in-out,
+            box-shadow 0.1s ease-out;
     }
 }
