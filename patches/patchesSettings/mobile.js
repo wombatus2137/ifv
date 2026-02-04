@@ -1,18 +1,14 @@
 import { generateSettingsList } from "./generateSettingsList.js";
 import { waitForRender } from "../apis/waitForElement.js";
-
-const backIconUrl =
-    "https://raw.githubusercontent.com/banocean/ifv/new-navbar/assets/icons/keyboard_backspace_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg";
-const settingsIconUrl =
-    "https://raw.githubusercontent.com/banocean/ifv/refs/heads/main/assets/icons/settings.svg";
+import { getAssetURL } from "../apis/getAssetURL.js";
 
 function addMobileSettings() {
     const settingsButton = document.createElement("div");
-    settingsButton.innerHTML = `<div class="icon" style="content: url(&quot;${settingsIconUrl}&quot;);"></div><span class="name">Ustawienia ifv</span>`;
+    settingsButton.innerHTML = `<div class="icon" style="content: url(&quot;${getAssetURL("icons/settings.svg")}&quot;);"></div><span class="name">Ustawienia ifv</span>`;
     settingsButton.addEventListener("click", async () => {
         const settingsModal = document.createElement("div");
         settingsModal.classList.add("settings-popup", "list-modal");
-        settingsModal.innerHTML = `<div><img src='${backIconUrl}'><h1>Ustawienia IFV</h1></div><div></div>`;
+        settingsModal.innerHTML = `<div><img src='${getAssetURL("icons/keyboard_backspace.svg")}'><h1>Ustawienia IFV</h1></div><div></div>`;
         settingsModal.querySelector("img").addEventListener("click", () => {
             settingsModal.remove();
         });
@@ -27,7 +23,7 @@ function addMobileSettings() {
     });
 
     waitForRender(
-        () => document.querySelectorAll(".more-popup.list-modal div")[1]
+        () => document.querySelectorAll(".more-popup.list-modal div")[1],
     ).then(() => {
         document
             .querySelectorAll(".more-popup.list-modal div")[1]
@@ -40,6 +36,6 @@ window.appendModule({
     onlyOnReloads: true,
     doesRunHere: () =>
         ["uczen.eduvulcan.pl", "dziennik-uczen.vulcan.net.pl"].includes(
-            window.location.hostname
+            window.location.hostname,
         ) && window.innerWidth < 1024,
 });

@@ -30,7 +30,7 @@
 
   "web_accessible_resources": [
     {
-      "resources": ["patches/*", "patches.json"],
+      "resources": ["patches/*", "patches.json", "assets/*"],
       "matches": [
         "*://dziennik-uczen.vulcan.net.pl/*",
         "*://dziennik-wiadomosci.vulcan.net.pl/*",

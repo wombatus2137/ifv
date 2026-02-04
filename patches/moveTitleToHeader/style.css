@@ -70,7 +70,7 @@
     rotate: 180deg;
     height: 24px;
     width: 24px;
-    opacity: 70%;
+    filter: brightness(31.5%);
     transform: translateY(-3px);
 }
 

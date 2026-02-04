@@ -46,6 +46,7 @@
 .search-bar img {
     margin-right: 8px;
     flex-shrink: 0;
+    filter: brightness(62.5%);
 }
 
 .search-bar input[type="text"] {

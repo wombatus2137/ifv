@@ -50,12 +50,12 @@
     }
 
     .tabsview__header {
-        background-color: var(--secondary--component--background) !important;
+        background-color: var(--secondary-component-background) !important;
     }
 
     .box-shaded:not(#kafel-pomoc-pomigracyjna),
     .tile__grades > .tile__grades__item {
-        background-color: var(--secondary--component--background) !important;
+        background-color: var(--secondary-component-background) !important;
         color: var(--secondary-text) !important;
     }
 
@@ -116,10 +116,10 @@
     .modal__free-day {
         background: repeating-linear-gradient(
             45deg,
-            var(--secondary--component--background),
-            var(--secondary--component--background) 10px,
-            var(--tertiary--component--background) 10px,
-            var(--tertiary--component--background) 12px
+            var(--secondary-component-background),
+            var(--secondary-component-background) 10px,
+            var(--tertiary-component-background) 10px,
+            var(--tertiary-component-background) 12px
         );
         border: 1px solid var(--borders);
     }
@@ -168,12 +168,12 @@
     }
 
     .tile__content {
-        background-color: var(--secondary--component--background) !important;
+        background-color: var(--secondary-component-background) !important;
         color: var(--primary-text) !important;
     }
 
     li > .box-shaded:not(#kafel-pomoc-pomigracyjna) {
-        background-color: var(--tertiary--component--background) !important;
+        background-color: var(--tertiary-component-background) !important;
         color: var(--primary-text) !important;
     }
 
@@ -195,7 +195,7 @@
     }
 
     .tile__header {
-        background-color: var(--tertiary--component--background);
+        background-color: var(--tertiary-component-background);
     }
 
     .cell--single > .plan-position,
@@ -213,7 +213,7 @@
     }
 
     .timetable__grid .column.current {
-        background-color: var(--tertiary--component--background);
+        background-color: var(--tertiary-component-background);
     }
 
     .last-login__mark {
@@ -262,7 +262,7 @@
 
     .app .grades__button__one-grade,
     .modal .grades__button__one-grade {
-        background-color: var(--tertiary--component--background);
+        background-color: var(--tertiary-component-background);
         color: var(--primary-text);
         border-color: var(--borders);
     }
@@ -285,7 +285,7 @@
     body .week-selector .week-selector__week-next,
     .month-selector .month-selector__month-previous,
     .month-selector .month-selector__month-next {
-        background-color: var(--tertiary--component--background);
+        background-color: var(--tertiary-component-background);
         color: var(--primary-text);
         border-color: var(--borders);
     }
@@ -317,7 +317,7 @@
     }
 
     .frequency-position__one-item {
-        background-color: var(--tertiary--component--background) !important;
+        background-color: var(--tertiary-component-background) !important;
     }
 
     .position__lesson__hours.position__lesson__hours--normal-state {
@@ -355,7 +355,7 @@
     }
 
     .content__header {
-        background-color: var(--secondary--component--background);
+        background-color: var(--secondary-component-background);
         border-color: var(--borders);
     }
 
@@ -405,7 +405,7 @@
     }
 
     .plan-scheduler__body-cell {
-        background-color: var(--secondary--component--background);
+        background-color: var(--secondary-component-background);
     }
 
     .plan-scheduler .plan-scheduler__header-cell {
@@ -480,7 +480,7 @@
 
     .scheduler .scheduler__body-row .scheduler__body-cell {
         border-color: var(--borders);
-        background-color: var(--secondary--component--background);
+        background-color: var(--secondary-component-background);
     }
 
     .scheduler .scheduler__body-row .scheduler-cell--disabled {
@@ -513,7 +513,7 @@
     }
 
     .app .teachers__message {
-        background-color: var(--secondary--component--background);
+        background-color: var(--secondary-component-background);
     }
 
     .wiadomosci_nauczyciele_svg__st_brand,
@@ -553,7 +553,7 @@
         .combobox
         .combo-row
         .MuiInputLabel-root.MuiInputLabel-shrink:not(.Mui-error) {
-        background-color: var(--tertiary--component--background);
+        background-color: var(--tertiary-component-background);
     }
 
     .app .combobox label.MuiInputLabel-shrink:not(.Mui-error),
@@ -586,7 +586,7 @@
     }
 
     .modal .combobox .MuiSelect-root:focus {
-        background-color: var(--secondary--component--background);
+        background-color: var(--secondary-component-background);
     }
 
     .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
@@ -610,7 +610,7 @@
     }
 
     .modal .modal__box-shaded .MuiInputBase-root {
-        background-color: var(--secondary--component--background);
+        background-color: var(--secondary-component-background);
     }
 
     .app .combobox .combo-row .MuiOutlinedInput-root.Mui-focused:hover fieldset,
@@ -629,7 +629,7 @@
     }
 
     .MuiPaper-root:has(> .MuiList-root.MuiMenu-list.MuiList-padding) {
-        background-color: var(--tertiary--component--background);
+        background-color: var(--tertiary-component-background);
         color: var(--primary-text);
     }
 
@@ -645,7 +645,7 @@
     }
 
     .modal__header {
-        background-color: var(--secondary--component--background) !important;
+        background-color: var(--secondary-component-background) !important;
         border-color: var(--borders) !important;
         color: var(--primary-text) !important;
     }
@@ -656,12 +656,12 @@
     }
 
     .modal__footer {
-        background-color: var(--secondary--component--background) !important;
+        background-color: var(--secondary-component-background) !important;
         border-top: 1px solid var(--borders) !important;
     }
 
     .modal .details__content__box {
-        background-color: var(--secondary--component--background);
+        background-color: var(--secondary-component-background);
         border: 1px solid var(--borders);
     }
 
@@ -681,19 +681,19 @@
     }
 
     .details__content__box__header {
-        background-color: var(--tertiary--component--background);
+        background-color: var(--tertiary-component-background);
     }
 
     .modal__content .p-datatable .p-datatable-tbody > tr {
-        background-color: var(--secondary--component--background) !important;
+        background-color: var(--secondary-component-background) !important;
     }
 
     .modal__content .p-datatable .p-datatable-thead > tr > th {
-        background-color: var(--secondary--component--background) !important;
+        background-color: var(--secondary-component-background) !important;
     }
 
     .MuiPaper-root:has(> .user__links__conatainer) {
-        background-color: var(--tertiary--component--background);
+        background-color: var(--tertiary-component-background);
         border: 1px solid var(--borders);
     }
 
@@ -728,14 +728,14 @@
     }
 
     .MuiButton-contained.Mui-disabled {
-        background-color: var(--secondary--component--background);
+        background-color: var(--secondary-component-background);
         color: color-mix(in srgb, var(--secondary-text), #000 40%);
         cursor: not-allowed;
     }
 
     .app .daily-tasks ol li.daily-tasks__row::before,
     .modal .daily-tasks ol li.daily-tasks__row::before {
-        background-color: var(--secondary--component--background);
+        background-color: var(--secondary-component-background);
         border-color: var(--borders);
     }
 
@@ -743,7 +743,7 @@
     .app .button--default,
     .modal .button--default,
     .details .button--default {
-        background-color: var(--secondary--component--background);
+        background-color: var(--secondary-component-background);
         color: var(--evBlue);
         border-color: var(--borders);
     }
@@ -784,7 +784,7 @@
     }
 
     div .textbox .MuiInputLabel-shrink:not(.Mui-error) {
-        background-color: var(--tertiary--component--background) !important;
+        background-color: var(--tertiary-component-background) !important;
         color: var(--primary-text) !important;
     }
 
@@ -794,16 +794,16 @@
     }
 
     .adresaci__control .MuiInputLabel-root.Mui-focused:not(.Mui-error) {
-        background-color: var(--tertiary--component--background) !important;
+        background-color: var(--tertiary-component-background) !important;
         color: var(--primary-text) !important;
     }
 
     .p-editor-container .p-editor-toolbar {
-        background-color: var(--tertiary--component--background);
+        background-color: var(--tertiary-component-background);
     }
 
     .p-editor-container .p-editor-content .ql-editor {
-        background-color: var(--secondary--component--background);
+        background-color: var(--secondary-component-background);
         color: var(--primary-text);
     }
 
@@ -823,7 +823,7 @@
     }
 
     .modal .message-details {
-        background-color: var(--secondary--component--background);
+        background-color: var(--secondary-component-background);
         border: 1px solid var(--borders);
     }
 
@@ -832,7 +832,7 @@
     }
 
     .recipients .recipients__content .adresat__grupa {
-        background-color: var(--secondary--component--background);
+        background-color: var(--secondary-component-background);
         border: 1px solid var(--borders);
         color: var(--primary-text);
     }
@@ -842,7 +842,7 @@
     }
 
     .checkboxgroup .checkboxgroup__legend {
-        background-color: var(--tertiary--component--background);
+        background-color: var(--tertiary-component-background);
         color: var(--primary-text);
     }
 
@@ -851,7 +851,7 @@
     }
 
     .chosen-recipients__label {
-        background-color: var(--tertiary--component--background);
+        background-color: var(--tertiary-component-background);
     }
 
     .modal .switch .search-panel > div,
@@ -866,17 +866,17 @@
     .details .modal__box-shaded .checkboxgroup,
     .details .attachment__list-item-shaded,
     .details .simple-checkbox {
-        background-color: var(--secondary--component--background);
+        background-color: var(--secondary-component-background);
     }
 
     .app .editor__form .form__box,
     .modal .editor__form .form__box {
-        background-color: var(--secondary--component--background);
+        background-color: var(--secondary-component-background);
         border-color: var(--borders);
     }
 
     .MuiFormControlLabel-root.checkboxgroup__selectAll {
-        background-color: var(--secondary--component--background);
+        background-color: var(--secondary-component-background);
         border-color: var(--borders);
         color: var(--primary-text);
     }
@@ -893,7 +893,7 @@
 
     .app .accordion__full-width__header,
     body .accordion__full-width__header {
-        background-color: var(--secondary--component--background);
+        background-color: var(--secondary-component-background);
         border: 1px solid var(--borders);
         color: var(--secondary-text);
         border-bottom: none;
@@ -909,7 +909,7 @@
     }
 
     .modal-user {
-        background-color: var(--tertiary--component--background);
+        background-color: var(--tertiary-component-background);
         color: var(--primary-text);
     }
 
@@ -986,12 +986,12 @@
     }
 
     .modal .daily-tasks-simple__row::before {
-        background-color: var(--secondary--component--background);
+        background-color: var(--secondary-component-background);
         border-color: var(--borders);
     }
 
     .message {
-        background-color: var(--secondary--component--background);
+        background-color: var(--secondary-component-background);
         border: 1px solid var(--borders);
     }
 
@@ -1004,12 +1004,12 @@
         .adresaci__control
         .adresat__wyszukiwarka
         .MuiInputLabel-root.MuiInputLabel-shrink:not(.Mui-error) {
-        background-color: var(--tertiary--component--background) !important;
+        background-color: var(--tertiary-component-background) !important;
         color: var(--primary-text) !important;
     }
 
     body .account__chip {
-        background-color: var(--tertiary--component--background);
+        background-color: var(--tertiary-component-background);
         color: var(--primary-text);
     }
 
@@ -1033,6 +1033,14 @@
     div.header__logo-product {
         color: var(--secondary-text) !important;
     }
+    span.go_to_dashboard {
+        color: var(--secondary-text);
+        background: var(--primary-background);
+        border-color: var(--borders);
+    }
+    span.go_to_dashboard > img {
+        filter: brightness(93.5%);
+    }
     .tile__header.flex__items > .flex__item-auto > img,
     .dashboard-info-toolbar > div > img,
     button.ql-bold > svg {
@@ -1044,20 +1052,20 @@
     }
     #tresc > .ql-toolbar.ql-snow,
     #tresc > .ql-container.ql-snow {
-        background: var(--secondary--component--background) !important;
+        background: var(--secondary-component-background) !important;
         border: 1px solid var(--borders) !important;
     }
     .dashboard-info-toolbar > div,
     .tile__header,
     .tile__content {
-        background: var(--secondary--component--background) !important;
+        background: var(--secondary-component-background) !important;
     }
     input.MuiInputBase-input.MuiInput-input {
         color: #000 !important;
         filter: invert(0.8) !important;
     }
     .tile__list__rectangle-boxes > li {
-        background: var(--tertiary--component--background) !important;
+        background: var(--tertiary-component-background) !important;
     }
     div.attendance-tabs > div {
         border-bottom: 0 !important;
@@ -1122,7 +1130,7 @@
     }
     .modal .text__editor-container .modal__box .ql-toolbar,
     .modal .text__editor-container .modal__box .ql-container {
-        background-color: var(--secondary--component--background);
+        background-color: var(--secondary-component-background);
     }
     .modal .text__editor-container .modal__box .ql-snow {
         border-color: var(--borders) !important;
@@ -1145,12 +1153,12 @@
     }
     .ifv-patches-modal > .patches-list > .patch,
     .ifv-patches-mobile > .patches-list > .patch {
-        background-color: var(--secondary--component--background);
+        background-color: var(--secondary-component-background);
         border: 1px solid var(--borders);
     }
     .ifv-patches-modal .patch .settings-list,
     .ifv-patches-mobile .patch .settings-list {
-        background-color: var(--tertiary--component--background);
+        background-color: var(--tertiary-component-background);
         border: 1px solid var(--borders);
     }
     .patch-name {
@@ -1177,11 +1185,13 @@
         box-shadow: 0 0 300px color-mix(in srgb, var(--evBlue), transparent 85%) !important;
         transition: 0.1s ease-out box-shadow;
     }
-    .setting-boolean-toggle .toggle-input, .checkbox-item input[type="checkbox"] {
+    .setting-boolean-toggle .toggle-input,
+    .checkbox-item input[type="checkbox"] {
         box-shadow: 0 0 30px color-mix(in srgb, var(--evBlue), transparent 90%) !important;
         transition: 0.1s ease-out box-shadow;
     }
-    .setting-boolean-toggle .toggle-input:hover, .checkbox-item input[type="checkbox"]:hover {
+    .setting-boolean-toggle .toggle-input:hover,
+    .checkbox-item input[type="checkbox"]:hover {
         box-shadow: 0 0 15px color-mix(in srgb, var(--evBlue), transparent 85%) !important;
     }
     .checkbox-item input[type="checkbox"] {
@@ -1203,11 +1213,11 @@
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23DFDFDD'%3E%3Cpath d='M7 10l5 5 5-5H7z'/%3E%3C/svg%3E");
     }
     .search-bar {
-        background-color: var(--secondary--component--background);
+        background-color: var(--secondary-component-background);
         border: 1px solid var(--borders);
     }
     .search-bar input[type="text"] {
-        color: var(--primary-text);
+        color: #8e8e8e;
     }
     #ifv-close-patches-modal img {
         filter: invert(1);
@@ -1234,10 +1244,14 @@
     .no-results-message {
         color: var(--primary-text);
     }
-    .patch > .patch-header > *, .patch .setting-header > * {
+    .patch > .patch-header > *,
+    .patch .setting-header > * {
         text-shadow: 0 0 50px color-mix(in srgb, var(--evBlue), transparent 70%);
     }
     .checkbox-item input[type="checkbox"]:checked {
-        transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.1s ease-out;
+        transition:
+            background-color 0.2s ease-in-out,
+            border-color 0.2s ease-in-out,
+            box-shadow 0.1s ease-out;
     }
 }

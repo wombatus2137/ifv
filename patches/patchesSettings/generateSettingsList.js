@@ -1,11 +1,7 @@
 import { getSetting, saveSetting } from "../apis/settings.js";
 import { settingRenderers } from "./settingRenderers.js";
 import { removeMarks, markTextInElement } from "./markers.js";
-
-const searchIconUrl =
-    "https://raw.githubusercontent.com/banocean/ifv/refs/heads/main/assets/icons/search.svg";
-const clearIconUrl =
-    "https://raw.githubusercontent.com/banocean/ifv/refs/heads/main/assets/icons/clear.svg";
+import { getAssetURL } from "../apis/getAssetURL.js";
 
 export async function generateSettingsList() {
     const patches = JSON.parse(sessionStorage.getItem("IFV_PATCHES")) || [];
@@ -15,10 +11,10 @@ export async function generateSettingsList() {
 
     patchesSettingsDiv.innerHTML = `
         <div class="search-bar">
-            <img src="${searchIconUrl}">
+            <img src="${getAssetURL("icons/search.svg")}">
             <input placeholder="Search" type="text" autofocus />
             <button id="clear">
-                <img src="${clearIconUrl}">
+                <img src="${getAssetURL("icons/cancel.svg")}">
             </button>
         </div>
         <div class="no-results-message">Nie znaleziono pasujących patchy 😿</div>
@@ -64,7 +60,7 @@ export async function generateSettingsList() {
                 settingInputDiv.innerHTML = renderer(
                     setting,
                     patch.name,
-                    currentValue
+                    currentValue,
                 );
             }
 
@@ -92,7 +88,7 @@ function setupSearchbar(patchesSettingsDiv) {
     searchInput.addEventListener("input", () => {
         const query = searchInput.value.trim().toLowerCase();
         const noResultsMessageDiv = patchesSettingsDiv.querySelector(
-            ".no-results-message"
+            ".no-results-message",
         );
         let visiblePatchesCount = 0;
 
@@ -139,11 +135,11 @@ function setupSearchbar(patchesSettingsDiv) {
                 patchDiv.querySelectorAll(".setting").forEach((settingDiv) => {
                     markTextInElement(
                         settingDiv.querySelector(".setting-name"),
-                        query
+                        query,
                     );
                     markTextInElement(
                         settingDiv.querySelector(".setting-description"),
-                        query
+                        query,
                     );
                 });
             } else {
@@ -185,21 +181,21 @@ function addListenersToInputs(patchesSettingsDiv) {
                     saveSetting(
                         toggle.querySelector(".toggle-input").dataset.patch,
                         toggle.querySelector(".toggle-input").dataset.setting,
-                        toggle.querySelector(".toggle-input").checked
+                        toggle.querySelector(".toggle-input").checked,
                     );
                 });
         });
 
     patchesSettingsDiv
         .querySelectorAll(
-            ".setting-select, .setting-text, .setting-color, .setting-number"
+            ".setting-select, .setting-text, .setting-color, .setting-number",
         )
         .forEach((input) => {
             input.addEventListener("change", () => {
                 saveSetting(
                     input.dataset.patch,
                     input.dataset.setting,
-                    input.value
+                    input.value,
                 );
             });
         });
@@ -212,8 +208,8 @@ function addListenersToInputs(patchesSettingsDiv) {
                 const settingId = checkbox.dataset.setting;
                 const selectedValues = Array.from(
                     patchesSettingsDiv.querySelectorAll(
-                        `.setting-multiselect-checkbox[data-patch='${patchName}'][data-setting='${settingId}']:checked`
-                    )
+                        `.setting-multiselect-checkbox[data-patch='${patchName}'][data-setting='${settingId}']:checked`,
+                    ),
                 ).map((cb) => cb.value);
                 saveSetting(patchName, settingId, selectedValues);
             });

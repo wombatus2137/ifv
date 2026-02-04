@@ -1,5 +1,6 @@
 import { waitForRender } from "../apis/waitForElement.js";
 import { mapDay } from "../apis/mapTimetable.js";
+import { getAssetURL } from "../apis/getAssetURL.js";
 
 const doesHaveClickableParent = (element) => {
     if (["a", "button"].includes(element.tagName.toLowerCase())) return true;
@@ -8,34 +9,22 @@ const doesHaveClickableParent = (element) => {
 };
 
 const icons = [
-    [
-        "Dzisiejszy plan zajęć",
-        "calendar_clock_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg",
-    ],
-    [
-        "Oceny od ostatniego logowania",
-        "counter_6_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg",
-    ],
-    ["Sprawdziany", "quiz_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg"],
-    ["Zadania domowe", "summarize_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg"],
-    ["Informacje", "folder_info_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg"],
-    ["Ogłoszenia", "campaign_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg"],
-    ["Ankiety", "feedback_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg"],
-    [
-        "Frekwencja",
-        "event_available_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg",
-    ],
-    [
-        "Dyżurni",
-        "person_raised_hand_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg",
-    ],
-    ["Ważne dzisiaj", "strategy_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg"],
+    ["Dzisiejszy plan zajęć", "calendar_clock.svg"],
+    ["Oceny od ostatniego logowania", "counter_6.svg"],
+    ["Sprawdziany", "quiz.svg"],
+    ["Zadania domowe", "summarize.svg"],
+    ["Informacje", "folder_info.svg"],
+    ["Ogłoszenia", "campaign.svg"],
+    ["Ankiety", "feedback.svg"],
+    ["Frekwencja", "event_available.svg"],
+    ["Dyżurni", "person_raised_hand.svg"],
+    ["Ważne dzisiaj", "strategy.svg"],
 ];
 
 const applyIcons = () => {
     for (const [tileTitle, fileName] of icons) {
         const icon = document.createElement("img");
-        icon.src = `https://raw.githubusercontent.com/banocean/ifv/refs/heads/main/assets/icons/${fileName}`;
+        icon.src = getAssetURL(`icons/${fileName}`);
         const container = Array.from(
             document.querySelectorAll(".content-container .tile.box"),
         )
@@ -108,15 +97,15 @@ const createToolbar = async () => {
     element.classList.add("dashboard-info-toolbar");
     element.innerHTML = `
         <div>
-            <img src="https://raw.githubusercontent.com/banocean/ifv/refs/heads/main/assets/icons/star_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg">
+            <img src="${getAssetURL("icons/star.svg")}">
             <span>-</span>
         </div>
         <div>
-            <img src="https://raw.githubusercontent.com/banocean/ifv/refs/heads/main/assets/icons/event_note_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg">
+            <img src="${getAssetURL("icons/event_note.svg")}">
             <span>-</span>
         </div>
         <div>
-            <img src="https://raw.githubusercontent.com/banocean/ifv/refs/heads/main/assets/icons/mail_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg">
+            <img src="${getAssetURL("icons/mail.svg")}">
             <span>-</span>
         </div>
     </div>`;
