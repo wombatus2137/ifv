@@ -1,19 +1,16 @@
 import { generateSettingsList } from "./generateSettingsList.js";
+import { getAssetURL } from "../apis/getAssetURL.js";
 
 const ifvLogoUrl = window.location.hostname.includes("eduvulcan")
-    ? "https://raw.githubusercontent.com/banocean/ifv/refs/heads/main/assets/logo/logo-128-blue.png"
-    : "https://raw.githubusercontent.com/banocean/ifv/refs/heads/main/assets/logo/logo-128-red.png";
-const settingsIconUrl =
-    "https://raw.githubusercontent.com/banocean/ifv/refs/heads/main/assets/icons/settings.svg";
-const closeIconUrl =
-    "https://raw.githubusercontent.com/banocean/ifv/refs/heads/main/assets/icons/close.svg";
+    ? getAssetURL("logo/logo-128-blue.png")
+    : getAssetURL("logo/logo-128-red.png");
 
 const settingsButton = document.createElement("button");
 const modalDiv = document.createElement("div");
 const modalBackground = document.createElement("div");
 
 async function addDesktopSettings() {
-    settingsButton.innerHTML = `<img src="${settingsIconUrl}" style="width: 40px; height: 40px; filter: invert(1);">`;
+    settingsButton.innerHTML = `<img src="${getAssetURL("icons/settings.svg")}" style="width: 40px; height: 40px; filter: invert(1);">`;
     settingsButton.classList.add("ifv-settings-button");
     settingsButton.setAttribute("title", "Ustawienia ifv");
     modalDiv.className = "ifv-patches-modal";
@@ -22,7 +19,7 @@ async function addDesktopSettings() {
         <div class="ifv-patches-modal-header">
             <img src="${ifvLogoUrl}" class="ifv-logo">
             <h1>Ustawienia ifv</h1>
-            <button id="ifv-close-patches-modal"><img src="${closeIconUrl}"></button>
+            <button id="ifv-close-patches-modal"><img src="${getAssetURL("icons/close.svg")}"></button>
         </div>
     `;
 

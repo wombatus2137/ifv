@@ -1,4 +1,5 @@
 import { waitForRender } from "../waitForElement.js";
+import { getAssetURL } from "../getAssetURL.js";
 
 const dayNames = [
     "poniedziałek",
@@ -36,7 +37,6 @@ export class SelectorRenderer {
     constructor(renderContentFn) {
         this.renderContent = renderContentFn;
 
-
         this.#render().then(() => console.debug("Rendered date selector"));
     }
 
@@ -45,9 +45,9 @@ export class SelectorRenderer {
         element.innerHTML = `
             <input type="date">
             <div>
-                <img src='https://raw.githubusercontent.com/banocean/ifv/refs/heads/main/assets/icons/chevron_left_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg'>
+                <img src="${getAssetURL("icons/chevron_left.svg")}">
                 <span></span>
-                <img src='https://raw.githubusercontent.com/banocean/ifv/refs/heads/main/assets/icons/chevron_right_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg'>
+                <img src="${getAssetURL("icons/chevron_right.svg")}">
             </div>
         `;
 
@@ -160,10 +160,15 @@ export class SelectorRenderer {
         this.cachedWeek = this.#getDaysDropdowns();
 
         if (this.currentWeekDay === undefined) {
-            const today = new Date()
-            const day = getWeekStartingMonday(today.getDay())
-            this.currentWeekDay = this.cachedWeek.findIndex((timetableDay) => (timetableDay.day || "-, ").split(", ")[0].toLowerCase() === dayNames[day]);
-            if (this.currentWeekDay === -1) this.currentWeekDay = this.cachedWeek.length - 1; 
+            const today = new Date();
+            const day = getWeekStartingMonday(today.getDay());
+            this.currentWeekDay = this.cachedWeek.findIndex(
+                (timetableDay) =>
+                    (timetableDay.day || "-, ").split(", ")[0].toLowerCase() ===
+                    dayNames[day],
+            );
+            if (this.currentWeekDay === -1)
+                this.currentWeekDay = this.cachedWeek.length - 1;
         }
 
         const content = await this.renderContent(
